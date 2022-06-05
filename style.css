@@ -22,44 +22,67 @@ body {
     margin: 1em;
 }
 
-.search{
+.search {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 button {
-margin: 0.5em;
-border: none;
-border-radius: 30%;
-border: none;
-height: 35px;
-width: 35px;
-outline: none;
-background: #7c7c7c2b;
-color: whitesmoke;
+    margin: 0.5em;
+    border: none;
+    border-radius: 30%;
+    border: none;
+    height: 35px;
+    width: 35px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 
 input.search-bar {
-border: none;
-outline: none;
-padding: 0.3em 1em;
-border-radius: 10px;
-width: calc(100% - 100px);
-background: #7c7c7c2b;
-color: whitesmoke;
-font-family: inherit;
-font-size: 105%;
+    border: none;
+    outline: none;
+    padding: 0.3em 1em;
+    border-radius: 10px;
+    width: calc(100% - 100px);
+    background: #7c7c7c2b;
+    color: whitesmoke;
+    font-family: inherit;
+    font-size: 105%;
 }
 
 button:hover {
-background: #7c7c7c6b;
-}
-button {
-cursor: pointer;
-transition: 0.5s ease-in-out;
+    background: #7c7c7c6b;
 }
 
-.temp {
+h1.temp {
     margin: 0;
-  }
+    margin-bottom: 0.5em;
+}
+
+.description {
+    text-transform: capitalize;
+    display: inline-block;
+    position: absolute;
+    top: 373px;
+    font-size: 120%;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+
+}
+
+.weather.loading::after {
+    visibility: visible;
+    content: "Carregando...";
+    color: whitesmoke;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
